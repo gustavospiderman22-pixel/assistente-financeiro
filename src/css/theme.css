@@ -1,0 +1,60 @@
+/* 🎨 SISTEMA DE TEMAS */
+
+/* Tema Roxo (Nubank-like) */
+.theme-purple {
+  --primary: #7C3AED;
+  --primary-dark: #6D28D9;
+  --primary-light: #A78BFA;
+  --secondary: #6B21A8;
+  --accent: #EC4899;
+}
+
+/* Tema Azul (Inter-like) */
+.theme-blue {
+  --primary: #2563EB;
+  --primary-dark: #1D4ED8;
+  --primary-light: #60A5FA;
+  --secondary: #1E40AF;
+  --accent: #0EA5E9;
+}
+
+/* Tema Verde (Moderno) */
+.theme-green {
+  --primary: #059669;
+  --primary-dark: #047857;
+  --primary-light: #10B981;
+  --secondary: #065F46;
+  --accent: #34D399;
+}
+
+/* Tema Laranja (C6-like) */
+.theme-orange {
+  --primary: #EA580C;
+  --primary-dark: #C2410C;
+  --primary-light: #FB923C;
+  --secondary: #92400E;
+  --accent: #F97316;
+}
+
+/* Transição de Tema */
+html {
+  transition: background-color var(--transition), color var(--transition);
+}
+
+body {
+  transition: background-color var(--transition), color var(--transition);
+}
+
+/* Animação de Fade ao trocar tema */
+.theme-transition {
+  animation: themeFade var(--transition);
+}
+
+@keyframes themeFade {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
