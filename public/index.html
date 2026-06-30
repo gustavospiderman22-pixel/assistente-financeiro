@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assistente Financeiro Pessoal - Controle completo de finanças">
+  <meta name="theme-color" content="#7C3AED">
+  
+  <title>Assistente Financeiro - Dashboard</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75'>💰</text></svg>">
+  
+  <!-- CSS Principal -->
+  <link rel="stylesheet" href="../src/css/main.css">
+  
+  <!-- Font Awesome para ícones (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- App Container -->
+  <div id="app">
+    <!-- Sidebar -->
+    <aside class="sidebar animate-slide-in-left"></aside>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Topbar -->
+      <header class="topbar animate-slide-in-top"></header>
+      
+      <!-- Content Area -->
+      <main class="content-area" id="content-area">
+        <!-- Dashboard default -->
+        <div class="container-lg">
+          <div class="grid grid-4 mb-md">
+            <!-- KPI Card 1: Renda Total -->
+            <div class="kpi-card animate-fade-in" style="animation-delay: 0.1s">
+              <div class="kpi-label">💰 Renda Total</div>
+              <div class="kpi-value">R$ 0,00</div>
+              <div class="kpi-change">Este mês</div>
+            </div>
+            
+            <!-- KPI Card 2: Despesas -->
+            <div class="kpi-card animate-fade-in" style="animation-delay: 0.2s">
+              <div class="kpi-label">📊 Despesas</div>
+              <div class="kpi-value">R$ 0,00</div>
+              <div class="kpi-change">Este mês</div>
+            </div>
+            
+            <!-- KPI Card 3: Saldo -->
+            <div class="kpi-card animate-fade-in" style="animation-delay: 0.3s">
+              <div class="kpi-label">💎 Saldo</div>
+              <div class="kpi-value">R$ 0,00</div>
+              <div class="kpi-change">Disponível</div>
+            </div>
+            
+            <!-- KPI Card 4: Patrimônio -->
+            <div class="kpi-card animate-fade-in" style="animation-delay: 0.4s">
+              <div class="kpi-label">🏠 Patrimônio</div>
+              <div class="kpi-value">R$ 0,00</div>
+              <div class="kpi-change">Total</div>
+            </div>
+          </div>
+          
+          <!-- Charts Row -->
+          <div class="grid grid-2">
+            <!-- Gráfico de Despesas por Categoria -->
+            <div class="card animate-fade-in" style="animation-delay: 0.5s">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">📈 Despesas por Categoria</h3>
+                  <p class="card-subtitle">Últimos 30 dias</p>
+                </div>
+              </div>
+              <div style="height: 300px; display: flex; align-items: center; justify-content: center; color: var(--text-tertiary);">
+                <p>Gráfico será carregado aqui</p>
+              </div>
+            </div>
+            
+            <!-- Gráfico de Fluxo de Caixa -->
+            <div class="card animate-fade-in" style="animation-delay: 0.6s">
+              <div class="card-header">
+                <div>
+                  <h3 class="card-title">📊 Fluxo de Caixa</h3>
+                  <p class="card-subtitle">Receitas vs Despesas</p>
+                </div>
+              </div>
+              <div style="height: 300px; display: flex; align-items: center; justify-content: center; color: var(--text-tertiary);">
+                <p>Gráfico será carregado aqui</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Próximos Vencimentos -->
+          <div class="card mt-md animate-fade-in" style="animation-delay: 0.7s">
+            <div class="card-header">
+              <div>
+                <h3 class="card-title">📅 Próximos Vencimentos</h3>
+                <p class="card-subtitle">Contas e despesas agendadas</p>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Vencimento</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="4" class="text-center text-muted py-lg">Nenhuma despesa agendada</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  
+  <!-- Core Scripts -->
+  <script src="../src/js/core/database.js"></script>
+  <script src="../src/js/core/storage.js"></script>
+  <script src="../src/js/core/utils.js"></script>
+  
+  <!-- Components -->
+  <script src="../src/js/components/sidebar.js"></script>
+  <script src="../src/js/components/topbar.js"></script>
+  <script src="../src/js/components/modal.js"></script>
+  
+  <!-- Modules (to be added) -->
+  <!-- <script src="../src/js/modules/auth.js"></script> -->
+  <!-- <script src="../src/js/modules/dashboard.js"></script> -->
+  <!-- <script src="../src/js/modules/income.js"></script> -->
+  <!-- <script src="../src/js/modules/expenses.js"></script> -->
+  <!-- <script src="../src/js/modules/creditCards.js"></script> -->
+  <!-- <script src="../src/js/modules/fixedBills.js"></script> -->
+  <!-- <script src="../src/js/modules/goals.js"></script> -->
+  <!-- <script src="../src/js/modules/patrimony.js"></script> -->
+  <!-- <script src="../src/js/modules/budget.js"></script> -->
+  <!-- <script src="../src/js/modules/emergencyFund.js"></script> -->
+  <!-- <script src="../src/js/modules/reports.js"></script> -->
+  <!-- <script src="../src/js/modules/analytics.js"></script> -->
+  
+  <!-- App Main -->
+  <script src="../src/js/app.js"></script>
+  
+  <!-- Chart.js para gráficos -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</body>
+</html>
